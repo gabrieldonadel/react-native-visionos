@@ -118,6 +118,7 @@ class CodegenUtils
           'header_mappings_dir' => './',
           'platforms' => {
             'ios' => min_ios_version_supported,
+            'visionos' => '1.0'
           },
           'source_files' => "**/*.{h,mm,cpp}",
           'pod_target_xcconfig' => {

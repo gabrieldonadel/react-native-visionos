@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
   spec.license     = package['license']
   spec.author      = "Facebook"
   spec.source      = source
-  spec.platforms   = { :osx => "10.13", :ios => min_ios_version_supported }
+  spec.platforms   = { :osx => "10.13", :ios => min_ios_version_supported, :visionos => "1.0" }
 
   spec.preserve_paths      = '**/*.*'
   spec.source_files        = ''
