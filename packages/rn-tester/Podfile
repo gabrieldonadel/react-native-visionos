@@ -16,7 +16,8 @@ if USE_FRAMEWORKS
   use_frameworks! :linkage => linkage.to_sym
 end
 
-def pods(target_name, options = {}, use_flipper: !IN_CI && !USE_FRAMEWORKS)
+# Disable flipper for now as it's not compatible with visionOS
+def pods(target_name, options = {}, use_flipper: false)
   project 'RNTesterPods.xcodeproj'
 
   fabric_enabled = ENV['USE_FRAMEWORKS'] == 'dynamic' ? false : true
@@ -67,6 +68,17 @@ end
 
 target 'RNTesterIntegrationTests' do
   pods('RNTesterIntegrationTests')
+  pod 'React-RCTTest', :path => "./RCTTest"
+end
+
+target 'RNTester-visionOS' do
+  platform :visionos, '1.0'
+  pods('RNTester-visionOS')
+end
+
+target 'RNTester-visionOSTests' do
+  platform :visionos, '1.0'
+  pods('RNTester-visionOSUnitTests')
   pod 'React-RCTTest', :path => "./RCTTest"
 end
 
