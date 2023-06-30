@@ -41,6 +41,15 @@ def min_ios_version_supported
   return '13.4'
 end
 
+# [visionOS
+# This function returns the min visionOS version supported by React Native
+# By using this function, you won't have to manually change your Podfile
+# when we change the minimum version supported by the framework.
+def min_visionos_version_supported
+  return '1.0'
+end
+# visionOS]
+
 # This function prepares the project for React Native, before processing
 # all the target exposed by the framework.
 def prepare_react_native_project!

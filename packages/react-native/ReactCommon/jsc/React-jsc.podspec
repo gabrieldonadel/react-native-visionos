@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.homepage               = "https://reactnative.dev/"
   s.license                = package["license"]
   s.author                 = "Meta Platforms, Inc. and its affiliates"
-  s.platforms              = { :ios => min_ios_version_supported, :visionos => "1.0"  }
+  s.platforms              = { :ios => min_ios_version_supported, :visionos => min_visionos_version_supported  } # [visionOS]
   s.source                 = source
   s.source_files           = "JSCRuntime.{cpp,h}"
   s.exclude_files          = "**/test/*"
