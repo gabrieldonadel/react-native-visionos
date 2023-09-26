@@ -1,3 +1,6 @@
+> **Warning**
+> This repository has been moved to https://github.com/react-native-visionos/react-native-visionos
+
 <h1 align="center"> react-native-visionos </h1>
 
 <p align="center">
